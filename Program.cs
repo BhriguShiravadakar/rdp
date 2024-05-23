@@ -52,16 +52,16 @@ class BenignopClass
 {
     public static void mddhdsfhbsgjhgjghhbsjbvejsfgdfg1()
     {
-        Console.WriteLine("op op.");
+        Console.WriteLine("khan op.");
     }
 
     public static void mddhdsfhbsgjhgjghhbsjbvejsfgdfg2()
     {
-        Console.WriteLine("bfjdsfkjdshfddhdsfhbsgjhgjghhbsjbvejsfgdfgsop bfjdsfkjdshfds.");
+        Console.WriteLine("khan khan.");
     }
 
     public static void mddhdsfhbsgjhgjghhbsjbvejsfgdfg3()
     {
-        Console.WriteLine("bfjdsfkdhdsfhbsgjhgjghhbsjbvejsfgdfgjdshfdsYet d bfjdsfkjdshfds.");
+        Console.WriteLine("bfjdsfkhansfhbdshfdsYet d khan.");
     }
 }
