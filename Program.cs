@@ -52,7 +52,7 @@ class BenignopClass
 {
     public static void mddhdsfhbsgjhgjghhbsjbvejsfgdfg1()
     {
-        Console.WriteLine("op fdsfkdjsfhdsf.");
+        Console.WriteLine("op op.");
     }
 
     public static void mddhdsfhbsgjhgjghhbsjbvejsfgdfg2()
